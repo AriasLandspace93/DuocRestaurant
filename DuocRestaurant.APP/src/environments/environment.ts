@@ -4,12 +4,8 @@
 
 export const environment = {
     production: false,
-    apiUrl: 'https://localhost:44369/api',
-    webUrl: 'http://localhost:4200/payment-confirmed',
+    apiUrl: 'http://localhost:1323',
     hubUrl: 'https://localhost:44369/hubs',
-    flowUrl: 'https://sandbox.flow.cl/api',
-    apyKey: '35AF82E6-E049-4BAB-943E-3F6L96AA8C2F',
-    secretKey: '14f3cb31b3f2755071bf4d6e0c63ab11c1c7438d'
 };
 
 /*

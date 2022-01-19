@@ -12,11 +12,11 @@
                     <div class="ion-padding-bottom">
                         <ion-item>
                             <ion-label position="floating"> Correo </ion-label>
-                            <ion-input type="email" [email]="true" [(ngModel)]="credentials.Username" name="username" required></ion-input>
+                            <ion-input [(ngModel)]="credentials.idUser" name="username" required></ion-input>
                         </ion-item>
                         <ion-item class="ion-padding-top">
                             <ion-label position="floating"> Contraseña </ion-label>
-                            <ion-input type="password" [(ngModel)]="credentials.Password" name="password" required></ion-input>
+                            <ion-input type="password" [(ngModel)]="credentials.password" name="password" required></ion-input>
                         </ion-item>
                     </div>
                     <div class="ion-padding-top">

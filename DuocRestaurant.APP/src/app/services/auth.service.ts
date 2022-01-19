@@ -13,7 +13,7 @@ export class AuthService {
   private env = environment;
   private currentUserSubject: BehaviorSubject<User>;
   public loggedUser: Observable<User>;
-  public storageKey: string = 'logged-user';
+  public storageKey: string = 'token';
 
   constructor(private httpClient: HttpClient) {
     this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem(this.storageKey)));
@@ -25,10 +25,10 @@ export class AuthService {
   }
 
   login(credentials: Credentials) {
-    return this.httpClient.post(`${this.env.apiUrl}/Auth/SignIn`, credentials)
+    return this.httpClient.post(`${this.env.apiUrl}/api/v1/authentication/login`, credentials)
       .pipe(map((user: User) => {
         // login successful if there's a jwt token in the response
-        // console.log('SignIn: ', user);
+        console.log('SignIn: ', user);
         if (user) {
           // store user details and jwt token in local storage to keep user logged in between page refreshes
           localStorage.setItem(this.storageKey, JSON.stringify(user));

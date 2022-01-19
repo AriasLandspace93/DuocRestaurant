@@ -1,4 +1,4 @@
 export class Credentials {
-    Username: string;
-    Password: string;
+    idUser: string;
+    password: string;
 }

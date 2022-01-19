@@ -12,8 +12,8 @@ import { ToastController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
     credentials: Credentials = {
-        Username: null,
-        Password: null
+        idUser: null,
+        password: null
     };
 
     loading: boolean = false;
